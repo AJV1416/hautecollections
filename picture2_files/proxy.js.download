@@ -1,0 +1,3 @@
+window.OBR.proxy=window.OBR.proxy||{gs:function(a,b,c){window.OBR.g.F(b,c,this,{currentWidget:a,beforeLoadTime:(new Date).getTime()})}};
+window.OB_PROXY=window.OB_PROXY||{getSet:function(a,b,c){return a.l(b,c)},getRequest:function(a,b,c){return a.h(b,c)},getWidgetId:function(a){return a.D()},makeHandshake:function(a){switch(a){case "VIDGET":window.OBR.g.M(window.OBR.g.j.cg)}},hasJqueryInstalled:function(){return window.OBR.b.uk()},getWidgetIndex:function(a){return a.C()},getMeta:function(a,b,c){return a.bb(b,c)},getFeedParentWidget:function(a){return a.tc()},getFeedFatherAB:function(a){return a.sc()},isFeedCard:function(a){return a.lh()},
+getUserId:function(a){return a.qc()},getDataSrcFinalUrl:function(a){return a.ga()}};window.OBR.g.M(window.OBR.g.j.If);
