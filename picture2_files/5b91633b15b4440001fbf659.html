@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://widgets.tree.com/widget/5b91633b15b4440001fbf659 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Widget - lt_external_widgets</title>
+<style>
+        @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+@font-face {
+  font-family: "CNNSans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://widgets.staging.tree.com/fonts/CNN/CNNSansW04-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: "CNNSans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://widgets.staging.tree.com/fonts/CNN/CNNSansW04-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "CNNSans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://widgets.staging.tree.com/fonts/CNN/CNNSansW04-Medium.eot);
+  src: url(https://widgets.staging.tree.com/fonts/CNN/CNNSansW04-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "CNNSans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://widgets.staging.tree.com/fonts/CNN/CNNSansW04-Bold.eot);
+  src: url(https://widgets.staging.tree.com/fonts/CNN/CNNSansW04-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "CNNCondensed";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://www.i.cdn.cnn.com/.a/fonts/cnn/3.6.0/cnnsans-condensed.woff2);
+}
+
+@font-face {
+  font-family: "CNNCondensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://www.i.cdn.cnn.com/.a/fonts/cnn/3.6.0/cnnsans-condensedmedium.woff2);
+}
+
+@font-face {
+  font-family: "CNNCondensed";
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://www.i.cdn.cnn.com/.a/fonts/cnn/3.6.0/cnnsans-condensedbold.woff2);
+}
+
+@font-size {
+  font-family: "CNNIcons";
+  font-style: normal;
+  src: url(https://registry.api.cnn.io/assets/fave/fonts/2.0.15/cnn-icons.woff);
+}
+
+html {
+  font-size: 0.9375em;
+  line-height: 1.6;
+}
+
+body {
+  color: #262626;
+  font-family: "CNNSans", "Helvetica Neue", Helvetica, Arial, "Utkal", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+div.feed-content-wrapper {
+  font-family: "CNNSans", Arial, Sans-Serif;
+  color: #666;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0 auto;
+  padding: 7px 0;
+  background: #fff;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+div.feed-bin {
+  clear: right;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+ul.feed-container {
+  margin-bottom: 10px;
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+div.feed-header {
+  color: #404040;
+  display: block;
+  margin: 0;
+  border: 0;
+  o-transition: background-color 0.3s;
+  -webkit-box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: background-color 0.3s;
+  font-family: "CNNSans", "Helvetica Neue", Helvetica, Arial, "Utkal", sans-serif;
+}
+
+div.feed-title {
+  background-color: #f2f2f2;
+  background: 0;
+  color: #404040;
+  font-family: "CNNCondensed", "CNNSans", "Helvetica Neue", Helvetica, Arial, "Utkal", sans-serif;
+  font-feature-setting: "kern";
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0 0 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+
+div.feed-title a {
+  color: inherit;
+}
+
+div.feed-title span.feed-ul {
+  color: #3061f3;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1rem;
+  border-bottom: 0.3rem solid;
+  /* underline style */
+  transition: width 0.2s ease-in-out;
+  -webkit-transition: width 0.2s ease-in-out;
+}
+
+div.feed-title span.feed-clickout {
+  color: #404040;
+  float: right;
+}
+
+div.feed-title:hover span.feed-ul {
+  width: 100%;
+}
+
+li.feed-row {
+  border-top: 1px solid #d9d9d9;
+  color: #262626;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0px;
+  padding: 10px 0;
+  text-align: left;
+  text-size-adjust: 100%;
+}
+
+div.feed-headline {
+  font-family: "CNNCondensed", "CNNSans", "Helvetica Neue", Helvetica, Arial, "Utkal", sans-serif;
+  font-feature-setting: "kern";
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  padding-right: 0;
+}
+
+a.feed-link {
+  color: #1a1a1a;
+  diplay: block;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: -0.1px;
+  line-height: 1.5;
+  padding: 10px 0;
+  text-decoration-color: #1a1a1a;
+  text-decoration: none;
+  text-decoration-style: solid;
+}
+
+span.partner {
+  box-sizing: border-box;
+  color: #606060;
+  font-feature-settings: "kern";
+  font-family: "CNNCondensed", "CNNSans", "Helvetica Neue", Helvetica, Arial, "Utkal", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 5px;
+  padding-bottom: 1px;
+  text-rendering: optimizelegibility;
+}
+
+span.partner:before {
+  content: "\00a0";
+}
+
+span.partner:hover {
+  -webkit-box-shadow: inset 0 -3px 0 #fefefe, inset 0 -4px 0 #d9d9d9;
+  box-shadow: inset 0 -3px 0 #fefefe, inset 0 -4px 0 #d9d9d9;
+}
+
+span.headline-text {
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+span.headline-text:hover {
+  -webkit-box-shadow: inset 0 -3px 0 #fefefe, inset 0 -4px 0 #d9d9d9;
+  box-shadow: inset 0 -3px 0 #fefefe, inset 0 -4px 0 #d9d9d9;
+}
+    </style>
+<script src="./pubads_impl_rendering_2019070801.js.download"></script><script async="" src="./gtm.js.download"></script><script async="async" src="./gpt.js.download"></script>
+<script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+<script>
+        googletag.cmd.push(function() {
+            var mapping = googletag
+                .sizeMapping()
+                .addSize([1024, 768], [970, 90])
+                .addSize([980, 650], [970, 66])
+                .addSize([728, 546], [728, 90])
+                .addSize([0, 0], [])
+                .build();
+
+            googletag
+                .defineSlot(
+                "/21669719482/TT_LB",
+                    [
+                        [970, 90],
+                        [970, 66],
+                        [728, 90]
+                    ],
+                "div-gpt-ad-1546461589962-0"
+                )
+                .defineSizeMapping(mapping)
+                .setCollapseEmptyDiv(true)
+                .addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+
+
+            window.addEventListener('resize', debounce(function() {
+                // refresh ads on resize
+                googletag.pubads().refresh();
+            }, 250))
+
+            function debounce(func, wait, immediate) {
+                var timeout;
+                return function() {
+                    var context = this,
+                        args = arguments;
+                    var later = function() {
+                        timeout = null;
+                        if (!immediate) func.apply(context, args);
+                    };
+                    var callNow = immediate && !timeout;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                    if (callNow) func.apply(context, args);
+                };
+            }
+        });
+    </script>
+<script>
+            dataLayer = [{
+                widgetName: "_CNN Article - Politics - 2019.07.23",
+                widgetId: "5d2cbdfad0458700018d77ca",
+                variationName: "_CNN Article - Politics - 2019.07.23",
+                variationId: "5b91633b15b4440001fbf659",
+                widgetTemplate: "cnn-rightrail-bins",
+                widgetConfigurationObject: {
+'feed_variation_bin_1': '5b9160c715b4440001fbf655',
+'feed_title_clickout_1': 'true',
+'feed_title_clickout_arrow_1': 'true',
+'feed_display_partner_titles_1': 'false',
+'feed_variation_bin_2': '5b91625215b4440001fbf657',
+'feed_title_clickout_2': 'true',
+'feed_title_clickout_arrow_2': 'true',
+'feed_display_partner_titles_2': 'false',
+                }
+            }];
+
+            var pushData = function (el) {
+                var feedId = el.dataset.feedid;
+                var feedItemtitle = el.dataset.feedtitle;
+                var feedItemNum = el.dataset.feeditem;
+                var feedImagePath = el.dataset.feedimagepath;
+                var feedItemLink = el.dataset.feeditemlink;
+                var feedUrl = el.dataset.feedlink;
+                var feedItemDescription = el.dataset.feeditemdesc;
+                var data = JSON.parse(document.getElementById('feed-' + feedId).innerText);
+                // clickable image element should have data-imageclicked attribute
+                var feedImageClicked = typeof el.dataset.imageclicked !== 'undefined';
+                
+                data.event = feedImageClicked ? 'Feed Image Clicked' : 'Feed Item Clicked';
+                data.feedItemDisplayTitle = feedItemtitle;
+                data.feedItemNum = feedItemNum;
+                data.feedImagePath = feedImagePath;
+				data.feedItemLink = decodeURIComponent(feedItemLink);
+				data.feedUrl = decodeURIComponent(feedUrl);
+                data.feedItemDescription = feedItemDescription;
+                data.linkclickdata = "feed" + feedId + "link" + feedItemNum;
+                dataLayer.push(data);
+            }
+
+            function closest(el, cls) {
+                if (el.classList.contains(cls)) {
+                    return el;
+                }
+                while ((el = el.parentElement) && !el.classList.contains(cls));
+                return el;
+            }
+
+            document.addEventListener('click', function (event) {
+                var elm = closest(event.target, "feed-link");
+                if (elm != null) {
+                    pushData(elm);
+                }
+            });
+
+            // Google Tag Manager
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-NX4SMZL');
+            // End Google Tag Manager
+
+        </script>
+<link rel="preload" href="./f.txt" as="script"><script type="text/javascript" src="./f.txt"></script><script src="./pubads_impl_2019070801.js.download" async=""></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-35/html/container.html?n=1"></head>
+<body>
+
+<noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NX4SMZL"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+
+<div class="feed-content-wrapper">
+
+<div class="feed-bin">
+<ul class="feed-container">
+
+<div class="feed-header">
+<div class="feed-title">
+<span class="feed-ul"></span>
+
+<a href="https://www.depositaccounts.com/featured/top-savings-rates-b.html?esourceid=6350266&amp;cproduct=savings&amp;cchannel=content&amp;csource=cnn&amp;cmethod=topsavings&amp;ctype=cnnarticletop&amp;ccampaign=DepositAccounts&amp;ad_position=1&amp;ccreative=canyouincrease23x_none" class="feed-title-link" target="_blank">
+Content by LendingTree
+
+<span class="feed-clickout">
+<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+</span>
+</a>
+</div>
+</div>
+
+<li class="feed-row">
+
+<a href="https://www.depositaccounts.com/featured/top-savings-rates-b.html?esourceid=6350266&amp;cproduct=savings&amp;cchannel=content&amp;csource=cnn&amp;cmethod=topsavings&amp;ctype=cnnarticletop&amp;ccampaign=DepositAccounts&amp;ad_position=1&amp;ccreative=canyouincrease23x_none" target="_blank" data-feedlink="https://www.depositaccounts.com/featured/top-savings-rates-b.html?esourceid=6350266&amp;cproduct=savings&amp;cchannel=content&amp;csource=cnn&amp;cmethod=topsavings&amp;ctype=cnnarticletop&amp;ccampaign=DepositAccounts&amp;ad_position=1&amp;ccreative=canyouincrease23x_none" data-feedimagepath="" data-feeditemdesc="DepositAccounts" data-feeditemlink="https://www.depositaccounts.com/featured/top-savings-rates-b.html?esourceid=6350266&amp;cproduct=savings&amp;cchannel=content&amp;csource=cnn&amp;cmethod=topsavings&amp;ctype=cnnarticletop&amp;ccampaign=DepositAccounts&amp;ad_position=1&amp;ccreative=canyouincrease23x_none" data-feedtitle="Can You Increase Your Savings By 23x?" data-feeditem="1" data-feedid="5d3865c4af8ccb0001358201" class="feed-link">
+
+<div class="feed-headline">
+<span class="headline-text">
+Can You Increase Your Savings By 23x?
+</span>
+</div>
+</a>
+</li>
+<li class="feed-row">
+
+<a href="https://www.lendingtree.com/?splitterid=content-mortgage&amp;loan-type=refinance&amp;esourceid=6348766&amp;cproduct=refi&amp;csource=cnn&amp;cchannel=content&amp;mtaid=F1495&amp;rcode=10000&amp;ctype=cnnarticletop&amp;cmethod=refiform&amp;ccampaign=content_by_lendingtree&amp;ccreative=ratesaslowas3018refinow_none&amp;placement_name=cnnarticletop&amp;ad_position=2&amp;ad_headline=ratesaslowas3018refinow&amp;ad_image_name=none" target="_blank" data-feedlink="https://www.depositaccounts.com/featured/top-savings-rates-b.html?esourceid=6350266&amp;cproduct=savings&amp;cchannel=content&amp;csource=cnn&amp;cmethod=topsavings&amp;ctype=cnnarticletop&amp;ccampaign=DepositAccounts&amp;ad_position=1&amp;ccreative=canyouincrease23x_none" data-feedimagepath="" data-feeditemdesc="LendingTree" data-feeditemlink="https://www.lendingtree.com/?splitterid=content-mortgage&amp;loan-type=refinance&amp;esourceid=6348766&amp;cproduct=refi&amp;csource=cnn&amp;cchannel=content&amp;mtaid=F1495&amp;rcode=10000&amp;ctype=cnnarticletop&amp;cmethod=refiform&amp;ccampaign=content_by_lendingtree&amp;ccreative=ratesaslowas3018refinow_none&amp;placement_name=cnnarticletop&amp;ad_position=2&amp;ad_headline=ratesaslowas3018refinow&amp;ad_image_name=none" data-feedtitle="Rates as low as 3.018% APR. Refi now" data-feeditem="2" data-feedid="5d3865c4af8ccb0001358201" class="feed-link">
+
+<div class="feed-headline">
+<span class="headline-text">
+Rates as low as 3.018% APR. Refi now
+</span>
+</div>
+</a>
+</li>
+<li class="feed-row">
+
+<a href="https://www.lendingtree.com/info/mortgage-payoff-eliminates-years-2?esourceid=6348756&amp;cproduct=refi&amp;csource=cnn&amp;cchannel=content&amp;mtaid=F1495&amp;ctype=cnnarticletop&amp;cmethod=15yrpayoff&amp;ccampaign=content_by_lendingtree&amp;ccreative=dothismort_none&amp;placement_name=cnnarticletop&amp;ad_position=3&amp;ad_headline=dothismort&amp;ad_image_name=none" target="_blank" data-feedlink="https://www.depositaccounts.com/featured/top-savings-rates-b.html?esourceid=6350266&amp;cproduct=savings&amp;cchannel=content&amp;csource=cnn&amp;cmethod=topsavings&amp;ctype=cnnarticletop&amp;ccampaign=DepositAccounts&amp;ad_position=1&amp;ccreative=canyouincrease23x_none" data-feedimagepath="" data-feeditemdesc="LendingTree" data-feeditemlink="https://www.lendingtree.com/info/mortgage-payoff-eliminates-years-2?esourceid=6348756&amp;cproduct=refi&amp;csource=cnn&amp;cchannel=content&amp;mtaid=F1495&amp;ctype=cnnarticletop&amp;cmethod=15yrpayoff&amp;ccampaign=content_by_lendingtree&amp;ccreative=dothismort_none&amp;placement_name=cnnarticletop&amp;ad_position=3&amp;ad_headline=dothismort&amp;ad_image_name=none" data-feedtitle="Do this before your next mortgage payment" data-feeditem="3" data-feedid="5d3865c4af8ccb0001358201" class="feed-link">
+
+<div class="feed-headline">
+<span class="headline-text">
+Do this before your next mortgage payment
+</span>
+</div>
+</a>
+</li>
+<li class="feed-row">
+
+<a href="https://www.lendingtree.com/?splitterid=content-mortgage&amp;loan-type=refinance&amp;esourceid=6348766&amp;cproduct=refi&amp;csource=cnn&amp;cchannel=content&amp;mtaid=F1495&amp;rcode=10000&amp;ctype=cnnarticletop&amp;cmethod=refiform&amp;ccampaign=content_by_lendingtree&amp;ccreative=bestrefijuly2019_none&amp;placement_name=cnnarticletop&amp;ad_position=4&amp;ad_headline=bestrefijuly2019&amp;ad_image_name=none" target="_blank" data-feedlink="https://www.depositaccounts.com/featured/top-savings-rates-b.html?esourceid=6350266&amp;cproduct=savings&amp;cchannel=content&amp;csource=cnn&amp;cmethod=topsavings&amp;ctype=cnnarticletop&amp;ccampaign=DepositAccounts&amp;ad_position=1&amp;ccreative=canyouincrease23x_none" data-feedimagepath="" data-feeditemdesc="LendingTree" data-feeditemlink="https://www.lendingtree.com/?splitterid=content-mortgage&amp;loan-type=refinance&amp;esourceid=6348766&amp;cproduct=refi&amp;csource=cnn&amp;cchannel=content&amp;mtaid=F1495&amp;rcode=10000&amp;ctype=cnnarticletop&amp;cmethod=refiform&amp;ccampaign=content_by_lendingtree&amp;ccreative=bestrefijuly2019_none&amp;placement_name=cnnarticletop&amp;ad_position=4&amp;ad_headline=bestrefijuly2019&amp;ad_image_name=none" data-feedtitle="Your best refinance rates for July 2019" data-feeditem="4" data-feedid="5d3865c4af8ccb0001358201" class="feed-link">
+
+<div class="feed-headline">
+<span class="headline-text">
+Your best refinance rates for July 2019
+</span>
+</div>
+</a>
+</li>
+<li class="feed-row">
+
+<a href="https://www.lendingtree.com/info/mortgage-payoff-eliminates-years-2?esourceid=6348756&amp;cproduct=refi&amp;csource=cnn&amp;cchannel=content&amp;mtaid=F1495&amp;ctype=cnnarticletop&amp;cmethod=15yrpayoff&amp;ccampaign=content_by_lendingtree&amp;ccreative=howtopayoffyourhouseasapshort_none&amp;placement_name=cnnarticletop&amp;ad_position=5&amp;ad_headline=howtopayoffyourhouseasapshort&amp;ad_image_name=none" target="_blank" data-feedlink="https://www.depositaccounts.com/featured/top-savings-rates-b.html?esourceid=6350266&amp;cproduct=savings&amp;cchannel=content&amp;csource=cnn&amp;cmethod=topsavings&amp;ctype=cnnarticletop&amp;ccampaign=DepositAccounts&amp;ad_position=1&amp;ccreative=canyouincrease23x_none" data-feedimagepath="" data-feeditemdesc="LendingTree" data-feeditemlink="https://www.lendingtree.com/info/mortgage-payoff-eliminates-years-2?esourceid=6348756&amp;cproduct=refi&amp;csource=cnn&amp;cchannel=content&amp;mtaid=F1495&amp;ctype=cnnarticletop&amp;cmethod=15yrpayoff&amp;ccampaign=content_by_lendingtree&amp;ccreative=howtopayoffyourhouseasapshort_none&amp;placement_name=cnnarticletop&amp;ad_position=5&amp;ad_headline=howtopayoffyourhouseasapshort&amp;ad_image_name=none" data-feedtitle="How To Pay Off Your House ASAP" data-feeditem="5" data-feedid="5d3865c4af8ccb0001358201" class="feed-link">
+
+<div class="feed-headline">
+<span class="headline-text">
+How To Pay Off Your House ASAP
+</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<script id="feed-5d3865c4af8ccb0001358201" type="application/json">
+        {
+        "feedName": "_CNN_Article_Top_2019.07.24",
+        "feedId": "5d3865c4af8ccb0001358201",
+        "feedVariationName": "_CNN_Article_Top_2019.07.24",
+        "feedVariationId": "5b9160c715b4440001fbf655"
+        }
+    </script>
+
+<div class="feed-bin">
+<ul class="feed-container">
+
+<div class="feed-header">
+<div class="feed-title">
+<span class="feed-ul"></span>
+
+<a href="https://www.comparecards.com/guide/pay-0-interest-until-2021?esourceid=6382266&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=pay-0-2021&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=header&amp;utm_content=noheadline&amp;adt=none&amp;ad_group_name=pay-0-2021&amp;ad_position=header&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=noheadline&amp;ad_image_name=none" class="feed-title-link" target="_blank">
+Content by CompareCards
+
+<span class="feed-clickout">
+<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+</span>
+</a>
+</div>
+</div>
+
+<li class="feed-row">
+
+<a href="https://www.comparecards.com/guide/pay-0-interest-until-2021?esourceid=6382266&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=pay-0-2021&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=1&amp;utm_content=7+cards+charging+0+interest+until+2021&amp;adt=none&amp;ad_group_name=pay-0-2021&amp;ad_position=1&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=7+cards+charging+0+interest+until+2021&amp;ad_image_name=none" target="_blank" data-feedlink="https://www.comparecards.com/guide/pay-0-interest-until-2021?esourceid=6382266&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=pay-0-2021&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=header&amp;utm_content=noheadline&amp;adt=none&amp;ad_group_name=pay-0-2021&amp;ad_position=header&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=noheadline&amp;ad_image_name=none" data-feedimagepath="" data-feeditemdesc="" data-feeditemlink="https://www.comparecards.com/guide/pay-0-interest-until-2021?esourceid=6382266&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=pay-0-2021&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=1&amp;utm_content=7+cards+charging+0+interest+until+2021&amp;adt=none&amp;ad_group_name=pay-0-2021&amp;ad_position=1&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=7+cards+charging+0+interest+until+2021&amp;ad_image_name=none" data-feedtitle="7 cards charging 0% interest until 2021" data-feeditem="1" data-feedid="5d377395af8ccb0001358200" class="feed-link">
+
+<div class="feed-headline">
+<span class="headline-text">
+7 cards charging 0% interest until 2021
+</span>
+</div>
+</a>
+</li>
+<li class="feed-row">
+
+<a href="https://www.comparecards.com/guide/pay-0-interest-until-2021?esourceid=6382266&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=pay-0-2021&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=2&amp;utm_content=pay+0+interest+until+2021+start+saving+today&amp;adt=none&amp;ad_group_name=pay-0-2021&amp;ad_position=2&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=pay+0+interest+until+2021+start+saving+today&amp;ad_image_name=none" target="_blank" data-feedlink="https://www.comparecards.com/guide/pay-0-interest-until-2021?esourceid=6382266&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=pay-0-2021&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=header&amp;utm_content=noheadline&amp;adt=none&amp;ad_group_name=pay-0-2021&amp;ad_position=header&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=noheadline&amp;ad_image_name=none" data-feedimagepath="" data-feeditemdesc="" data-feeditemlink="https://www.comparecards.com/guide/pay-0-interest-until-2021?esourceid=6382266&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=pay-0-2021&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=2&amp;utm_content=pay+0+interest+until+2021+start+saving+today&amp;adt=none&amp;ad_group_name=pay-0-2021&amp;ad_position=2&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=pay+0+interest+until+2021+start+saving+today&amp;ad_image_name=none" data-feedtitle="Pay 0 interest until 2021 – start saving today" data-feeditem="2" data-feedid="5d377395af8ccb0001358200" class="feed-link">
+
+<div class="feed-headline">
+<span class="headline-text">
+Pay 0 interest until 2021 – start saving today
+</span>
+</div>
+</a>
+</li>
+<li class="feed-row">
+
+<a href="https://www.comparecards.com/guide/top-credit-cards-for-those-with-excellent-credit?esourceid=6347646&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=excellent-credit&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=3&amp;utm_content=top8creditcardsforexcellentcredit&amp;adt=none&amp;ad_group_name=excellent-credit&amp;ad_position=3&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=top8creditcardsforexcellentcredit&amp;ad_image_name=none" target="_blank" data-feedlink="https://www.comparecards.com/guide/pay-0-interest-until-2021?esourceid=6382266&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=pay-0-2021&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=header&amp;utm_content=noheadline&amp;adt=none&amp;ad_group_name=pay-0-2021&amp;ad_position=header&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=noheadline&amp;ad_image_name=none" data-feedimagepath="" data-feeditemdesc="" data-feeditemlink="https://www.comparecards.com/guide/top-credit-cards-for-those-with-excellent-credit?esourceid=6347646&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=excellent-credit&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=3&amp;utm_content=top8creditcardsforexcellentcredit&amp;adt=none&amp;ad_group_name=excellent-credit&amp;ad_position=3&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=top8creditcardsforexcellentcredit&amp;ad_image_name=none" data-feedtitle="Top 8 credit cards for excellent credit" data-feeditem="3" data-feedid="5d377395af8ccb0001358200" class="feed-link">
+
+<div class="feed-headline">
+<span class="headline-text">
+Top 8 credit cards for excellent credit
+</span>
+</div>
+</a>
+</li>
+<li class="feed-row">
+
+<a href="https://www.comparecards.com/guide/heres-a-brilliant-way-to-pay-credit-cards?esourceid=6347626&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=brilliant-way&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=4&amp;utm_content=the+fastest+way+to+pay+off+10K+in+credit+card+debt&amp;adt=none&amp;ad_group_name=brilliant-way&amp;ad_position=4&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=the+fastest+way+to+pay+off+10K+in+credit+card+debt&amp;ad_image_name=none" target="_blank" data-feedlink="https://www.comparecards.com/guide/pay-0-interest-until-2021?esourceid=6382266&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=pay-0-2021&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=header&amp;utm_content=noheadline&amp;adt=none&amp;ad_group_name=pay-0-2021&amp;ad_position=header&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=noheadline&amp;ad_image_name=none" data-feedimagepath="" data-feeditemdesc="" data-feeditemlink="https://www.comparecards.com/guide/heres-a-brilliant-way-to-pay-credit-cards?esourceid=6347626&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=brilliant-way&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=4&amp;utm_content=the+fastest+way+to+pay+off+10K+in+credit+card+debt&amp;adt=none&amp;ad_group_name=brilliant-way&amp;ad_position=4&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=the+fastest+way+to+pay+off+10K+in+credit+card+debt&amp;ad_image_name=none" data-feedtitle="The fastest way to pay off $10K in credit card debt" data-feeditem="4" data-feedid="5d377395af8ccb0001358200" class="feed-link">
+
+<div class="feed-headline">
+<span class="headline-text">
+The fastest way to pay off $10K in credit card debt
+</span>
+</div>
+</a>
+</li>
+<li class="feed-row">
+
+<a href="https://www.comparecards.com/guide/best-travel-credit-card-no-annual-fee?esourceid=6347616&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=best-no-annual-fee-travel&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=5&amp;utm_content=fly+practically+free+with+these+3+travel+cards&amp;adt=none&amp;ad_group_name=best-no-annual-fee-travel&amp;ad_position=5&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=fly+practically+free+with+these+3+travel+cards&amp;ad_image_name=none" target="_blank" data-feedlink="https://www.comparecards.com/guide/pay-0-interest-until-2021?esourceid=6382266&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=pay-0-2021&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=header&amp;utm_content=noheadline&amp;adt=none&amp;ad_group_name=pay-0-2021&amp;ad_position=header&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=noheadline&amp;ad_image_name=none" data-feedimagepath="" data-feeditemdesc="" data-feeditemlink="https://www.comparecards.com/guide/best-travel-credit-card-no-annual-fee?esourceid=6347616&amp;utm_source=cnn&amp;utm_medium=native&amp;mtaid=8631C&amp;grp=best-no-annual-fee-travel&amp;pla=cnn.com&amp;bdst=flat&amp;acqs=prospecting&amp;utm_campaign=content_by_comparecards&amp;tar=cnnarticlebottom&amp;pos=5&amp;utm_content=fly+practically+free+with+these+3+travel+cards&amp;adt=none&amp;ad_group_name=best-no-annual-fee-travel&amp;ad_position=5&amp;campaign_name=content_by_comparecards&amp;placement_name=cnnarticlebottom&amp;ad_headline=fly+practically+free+with+these+3+travel+cards&amp;ad_image_name=none" data-feedtitle="Fly practically free with these 3 travel cards" data-feeditem="5" data-feedid="5d377395af8ccb0001358200" class="feed-link">
+
+<div class="feed-headline">
+<span class="headline-text">
+Fly practically free with these 3 travel cards
+</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<script id="feed-5d377395af8ccb0001358200" type="application/json">
+        {
+        "feedName": "_CNN_Article_Bottom 2019.07.24",
+        "feedId": "5d377395af8ccb0001358200",
+        "feedVariationName": "_CNN_Article_Bottom 2019.07.24",
+        "feedVariationId": "5b91625215b4440001fbf657"
+        }
+    </script>
+</div>
+<script src="./iframeResizer.contentWindow.min.js.download" crossorigin="anonymous" integrity="sha256-4pHiLAYReL+uT1xGu9u8Afg9jkaV0vrdu/Dd0ax9Ak8=">
+    </script>
+
+<div style="clear: both; display: block;"></div></body></html>
