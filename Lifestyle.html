@@ -79,7 +79,64 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <p>A Spanish dish from the Valencia region, paella is named for the cooking vessel itself: a round, shallow pan made of carbon steel that heats quickly and evenly. A good paella pan helps develop the socarrat, or crispy layer of rice crust on the bottom that's the most prized part of the dish.</p>
     </div>
   </div>
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  .dropbtn {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #000000;}
+  </style>
+  </head>
+  <body>
+  
+  <h2>Find more recipes for you</h2>
+  <p>Move the mouse over the button to open the dropdown menu.</p>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Recipes</button>
+    <div class="dropdown-content">
+      <a href="#">Vegan</a>
+      <a href="#">Vegetarian</a>
+      <a href="#">Low Carb </a>
+      <a href="#">Cheat Day</a>
 
+    </div>
+  </div>
+  
+  
+  
 
     
         
@@ -93,7 +150,32 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
  
  
   <hr id="about">
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+        <a href="https://www.delish.com/cooking/recipe-ideas/recipes/a58469/best-vegan-lasagna-recipe/"><img src="lasagna.jpg" alt="chicken" style="width:89%"></a>
+        <h3>Vegan Lasagna</h3>
+      <p>A lasagna you can feel good about. Takes an hour for this delicious lasagna to be on your plate and ready to eat. </p>
+    </div>
+    <div class="w3-quarter">
+      <a href="http://www.eatingwell.com/recipe/258091/vegan-buddha-bowl/"><img src="tofu.png" alt="chicken" style="width:89%"></a>
+      <h3>Vegan Buddha Bowl</h3>
+      <p>This easy grain bowl has so much to love—sweet potatoes, protein-packed chickpeas, creamy avocado and homemade tahini dressing. Make the full recipe on the weekend and pack into individual serving containers for ready-to-go lunches for work all week.
 
+      </p>
+    </div>
+    <div class="w3-quarter">
+        <a href="https://damndelicious.net/2013/08/28/quinoa-fruit-salad/"><img src="quinoa.jpg" alt="chicken" style="width:89%"></a>
+        <h3>Quinoa fruit salad</h3>
+      <p>With a simple tart lemon vinaigrette, this quinoa-packed fruit salad comes together in just 10 minutes without turning on the stove. It’s a protein-packed salad that’s also so incredibly refreshing and so nutritious. It’s just what you need to keep cool during this summer heat!</p>
+      <p>What else?</p>
+    </div>
+    <div class="w3-quarter">
+        <a href="https://www.cookinglight.com/recipes/chicken-paella"><img src="dinner.jpg" alt="chicken" style="width:89%"></a>
+      <h3>Chicken Paella </h3>
+      <p>A Spanish dish from the Valencia region, paella is named for the cooking vessel itself: a round, shallow pan made of carbon steel that heats quickly and evenly. A good paella pan helps develop the socarrat, or crispy layer of rice crust on the bottom that's the most prized part of the dish.</p>
+    </div>
+  </div>
+ 
   <!-- About Section -->
   <div class="w3-container w3-padding-32 w3-center">  
     <img src="life.png" alt="logo" class="w3-image" style="display:block;margin:auto" width="400" height="90">
@@ -103,7 +185,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     </div>
   </div>
   <hr>
-  
+
   
       
         
