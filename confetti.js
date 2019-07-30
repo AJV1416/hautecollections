@@ -1,82 +1,103 @@
-NUM_CONFETTI = 350
-COLORS = [[85,71,106], [174,61,99], [219,56,83], [244,92,68], [248,182,70]]
-PI_2 = 2*Math.PI
+window.onload = function () {
+    //canvas init
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    //canvas dimensions
+    var W = window.innerWidth;
+    var H = window.innerHeight;
+    canvas.width = W;
+    canvas.height = H;
+
+    //snowflake particles
+    var mp = 200; //max particles
+    var particles = [];
+    for (var i = 0; i < mp; i++) {
+        particles.push({
+            x: Math.random() * W, //x-coordinate
+            y: Math.random() * H, //y-coordinate
+            r: Math.random() * 15 + 1, //radius
+            d: Math.random() * mp, //density
+            color: "rgba(" + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", " + Math.floor((Math.random() * 255)) + ", 0.8)",
+            tilt: Math.floor(Math.random() * 5) - 5
+        });
+    }
+
+    //Lets draw the flakes
+    function draw() {
+        ctx.clearRect(0, 0, W, H);
 
 
-canvas = document.getElementById "world"
-context = canvas.getContext "2d"
-window.w = 0
-window.h = 0
 
-resizeWindow = ->
-  window.w = canvas.width = window.innerWidth
-  window.h = canvas.height = window.innerHeight
+        for (var i = 0; i < mp; i++) {
+            var p = particles[i];
+            ctx.beginPath();
+            ctx.lineWidth = p.r;
+            ctx.strokeStyle = p.color; // Green path
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p.x + p.tilt + p.r / 2, p.y + p.tilt);
+            ctx.stroke(); // Draw it
+        }
 
-window.addEventListener 'resize', resizeWindow, false
-  
-window.onload = -> setTimeout resizeWindow, 0
+        update();
+    }
 
-range = (a,b) -> (b-a)*Math.random() + a
+    //Function to move the snowflakes
+    //angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
+    var angle = 0;
 
-drawCircle = (x,y,r,style) ->
-  context.beginPath()
-  context.arc(x,y,r,0,PI_2,false)
-  context.fillStyle = style
-  context.fill()
+    function update() {
+        angle += 0.01;
+        for (var i = 0; i < mp; i++) {
+            var p = particles[i];
+            //Updating X and Y coordinates
+            //We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
+            //Every particle has its own density which can be used to make the downward movement different for each flake
+            //Lets make it more random by adding in the radius
+            p.y += Math.cos(angle + p.d) + 1 + p.r / 2;
+            p.x += Math.sin(angle) * 2;
 
-xpos = 0.5
+            //Sending flakes back from the top when it exits
+            //Lets make it a bit more organic and let flakes enter from the left and right also.
+            if (p.x > W + 5 || p.x < -5 || p.y > H) {
+                if (i % 3 > 0) //66.67% of the flakes
+                {
+                    particles[i] = {
+                        x: Math.random() * W,
+                        y: -10,
+                        r: p.r,
+                        d: p.d,
+                        color: p.color,
+                        tilt: p.tilt
+                    };
+                } else {
+                    //If the flake is exitting from the right
+                    if (Math.sin(angle) > 0) {
+                        //Enter from the left
+                        particles[i] = {
+                            x: -5,
+                            y: Math.random() * H,
+                            r: p.r,
+                            d: p.d,
+                            color: p.color,
+                            tilt: p.tilt
+                        };
+                    } else {
+                        //Enter from the right
+                        particles[i] = {
+                            x: W + 5,
+                            y: Math.random() * H,
+                            r: p.r,
+                            d: p.d,
+                            color: p.color,
+                            tilt: p.tilt
+                        };
+                    }
+                }
+            }
+        }
+    }
 
-document.onmousemove = (e) ->
-  xpos = e.pageX/w
-
-window.requestAnimationFrame = do ->
-  window.requestAnimationFrame       ||
-  window.webkitRequestAnimationFrame ||
-  window.mozRequestAnimationFrame    ||
-  window.oRequestAnimationFrame      ||
-  window.msRequestAnimationFrame     ||
-  (callback) -> window.setTimeout(callback, 1000 / 60)
-
-
-class Confetti
-
-  constructor: ->
-    @style = COLORS[~~range(0,5)]
-    @rgb = "rgba(#{@style[0]},#{@style[1]},#{@style[2]}"
-    @r = ~~range(2,6)
-    @r2 = 2*@r
-    @replace()
-
-  replace: ->
-    @opacity = 0
-    @dop = 0.03*range(1,4)
-    @x = range(-@r2,w-@r2)
-    @y = range(-20,h-@r2)
-    @xmax = w-@r
-    @ymax = h-@r
-    @vx = range(0,2)+8*xpos-5
-    @vy = 0.7*@r+range(-1,1)
-
-  draw: ->
-    @x += @vx
-    @y += @vy
-    @opacity += @dop
-    if @opacity > 1
-      @opacity = 1
-      @dop *= -1
-    @replace() if @opacity < 0 or @y > @ymax
-    if !(0 < @x < @xmax)
-      @x = (@x + @xmax) % @xmax
-    drawCircle(~~@x,~~@y,@r,"#{@rgb},#{@opacity})")
-
-
-confetti = (new Confetti for i in [1..NUM_CONFETTI])
-
-window.step = ->
-  requestAnimationFrame(step)
-  context.clearRect(0,0,w,h)
-  c.draw() for c in confetti
-
-step()
-  
-  
+    //animation loop
+    setInterval(draw, 20);
+}
